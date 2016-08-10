@@ -1,8 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <body>
 <% if logged_in? %>
   <div class="row">
     <aside class="col-md-4">
       <section class="user_info">
         <%= render 'shared/user_info' %>
+      </section>
+      <section class="stats">
+        <%= render 'shared/stats' %>
       </section>
       <section class="micropost_form">
         <%= render 'shared/micropost_form' %>
@@ -14,18 +20,34 @@
     </div>
   </div>
 <% else %>
-<div class="center jumbotron">
-  <h1>Welcome to the Tweet2 App</h1>
+    <div class="container">
+<div class="main">
+  <h1 id="heading">Welcome to <b>Tweet2</b></h1><br/>
+  <center> <p id="subheading"> Connect With your Friends Now ! </p></center><br/>
+  <center><%= link_to "Sign Up!", signup_path, class: "btn btn-lg btn-primary", id: "signupbtn" %></center>
+  <br/><br/>
 
-  <h2>
-    This is the home page for the
-    <a href="http://www.railstutorial.org/">Tweet 2</a>
-    sample app.
-  </h2>
-
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
 </div>
+    <br/><br/><br/>
 
-<%= link_to image_tag("rails.png", alt: "Rails logo", width: "70px", height: "100px"),
-            'http://rubyonrails.org/' %>
+     <!-- About Section -->
+
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2 id="heading">About Tweet2</h2>
+              <br/><br/>
+              <!-- <%= image_tag("tweet_small.jpg", alt: "logo", height: "200px", widht: "150px") %> -->
+                <p>Tweet2 is a free Twitter like app created by <a href="https://www.facebook.com/gajal143" >Gajal Agarwala</a>. You can simply <b><%= link_to "Log In" , login_path %></b> or <b><%= link_to "Sign Up" , signup_path %> </b> and post anything you feel like. Follow your friends and view their news feed.</p>
+
+
+            </div>
+        </div>
+    </section>
+      </div>
+
+
+
 <% end %>
+  </body>
+</html>

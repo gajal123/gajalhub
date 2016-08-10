@@ -3,12 +3,90 @@
 /* universal */
 
 body {
-  padding-top: 60px;
+  padding-top: 100px;
+  background-color: #D9F9F6;
 }
 
+.main{
+  background-image: url("tweet_small2.jpg");
+  background-repeat: no-repeat;
+  height: 1000px;
+}
+img:hover
+{
+  opacity: 0.7;
+
+}
+
+#headerr{
+
+  height:60px;
+}
+#about{
+  padding-top: 100px;
+background-color: #F0FFFF;
+
+  height: 400px;
+  width: 1150px;
+}
+#aboutlogo:hover{
+  background-color:#F8F8FF;
+  color:#000000;
+}
 section {
   overflow: auto;
 }
+#heading{
+  color: #483D8B;
+  font-family: "Great Vibes", cursive;
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: normal;
+  margin-bottom: 0px;
+  margin-top: 40px;
+  text-align: center;
+  text-shadow: 0 1px 1px #fff;
+}
+
+#subheading{
+  color: #1E90FF;
+  font-family: "Great Vibes", cursive;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: normal;
+  margin: 0 0 24px;
+
+}
+#signupbtn{
+   background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  border-radius: 12px;
+  border: 2px solid #483D8B;
+   -webkit-transition-property: width;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: 1s;
+    /* Standard syntax */
+    transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    transition-delay: 1s;
+}
+
+#signupbtn:hover {
+   background-color: #008CBA;
+  width:300px;
+    color: white;
+  opacity:07;
+}
+
+
 
 textarea {
   resize: vertical;
@@ -36,15 +114,16 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 2em;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #777;
+  color: #000000;
 }
 
 p {
+  color: #000000;
   font-size: 1.1em;
   line-height: 1.7em;
 }
@@ -68,16 +147,18 @@ p {
 }
 
 /* footer */
-
+.main{
+  padding-top: 50px;
+}
 footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
-  color: #777;
+  color: #000000;
 }
 
 footer a {
-  color: #555;
+  color: #000005;
 }
 
 footer a:hover {
@@ -144,6 +225,45 @@ aside {
 .gravatar_edit {
   margin-top: 15px;
 }
+
+.stats {
+  overflow: auto;
+  margin-top: 0;
+  padding: 0;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $gray-lighter;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: blue;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
+  a {
+    padding: 0;
+  }
+}
+
+.users.follow {
+  padding: 0;
+}
+
 
 /* forms */
 

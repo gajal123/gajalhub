@@ -1,10 +1,14 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<header class="navbar navbar-fixed-top navbar-inverse" >
   <div class="container">
     <%= link_to "sample app", root_path, id: "logo" %>
     <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Help", help_path %></li>
+      <div id="logo"><%= image_tag("logo.png", alt: "logo", height: "40px", widht: "40px") %></div>
+
+
+      <ul class="nav navbar-nav navbar-right" >
+        <li><%= link_to "About", about_path , id:"aboutlogo" %></li>
+        <li><%= link_to "Home", root_path, id: "aboutlogo"  %></li>
+        <li><%= link_to "Help", help_path , id:"aboutlogo"  %></li>
         <% if logged_in? %>
           <li><%= link_to "Users", users_path %></li>
           <li class="dropdown">
