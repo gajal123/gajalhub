@@ -30,8 +30,9 @@ background-color: #F0FFFF;
   width: 1150px;
 }
 #aboutlogo:hover{
-  background-color:#F8F8FF;
+  background-color:#D9F9F6;
   color:#000000;
+  border: 2px solid #483D8B;
 }
 section {
   overflow: auto;
@@ -59,7 +60,6 @@ section {
 }
 #signupbtn{
    background-color: #008CBA;
-    border: none;
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -86,7 +86,11 @@ section {
   opacity:07;
 }
 
-
+#microbox{
+  background-color: #ffffff;
+   border: 2px solid #008CBA;
+  color:black;
+}
 
 textarea {
   resize: vertical;
