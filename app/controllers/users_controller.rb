@@ -35,8 +35,12 @@ class UsersController < ApplicationController
       render 'edit'
     end
   end
-  def index
-     @users = User.paginate(page: params[:page])
+  def search
+    @users = User.all
+    if params[:search]
+      @users = User.search(params[:search]).order("created_at DESC")
+    end
+    
   end
 
   def destroy
